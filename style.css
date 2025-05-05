@@ -366,3 +366,18 @@ footer {
     font-size: 1rem;
   }
 }
+
+
+.custom-button {
+  background-color: #D2798C;
+  color: white !important;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+}
