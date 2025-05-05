@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Vidéos</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #fdf7fb;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #cc5f96;
+    }
+
+    .gallery-videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .video-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+
+    .video-card video {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galerie de Vidéos</h1>
+
+  <div class="gallery-videos">
+    <div class="video-card">
+      <video src="video4.mp4" controls></video>
+    </div>
+    <div class="video-card">
+      <video src="video1.mp4" controls></video>
+    </div>
+    <div class="video-card">
+      <video src="video2.mp4" controls></video>
+    </div>
+
+    <div class="video-card">
+        <video src="video5.mp4" controls></video>
+      </div>
+      <div class="video-card">
+        <video src="video3.mp4" controls></video>
+      </div>
+      <div class="video-card">
+        <video src="video6.mp4" controls></video>
+      </div>
+      <div class="video-card">
+        <video src="video8.mp4" controls></video>
+      </div>
+      <div class="video-card">
+        <video src="video7.mp4" controls></video>
+      </div>
+     
+    <!-- Tu peux copier-coller les blocs <div class="video-card"> pour ajouter plus de vidéos -->
+  </div>
+
+</body>
+</html>
