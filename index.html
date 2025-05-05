@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enally Paris – Créateurs de Mariages Uniques</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("-gVB8zMtb5oVeC5TO"); // Remplacez par votre User ID EmailJS
+  })();
+</script>
+
+</head>
+<body>
+
+  <header class="main-header">
+    <img src="logo.png" alt="Logo Enally Paris" class="logo" />
+    <h1>Enally Paris</h1>
+    <p class="subtitle">Créateurs de mariages inoubliables</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2 data-aos="fade-up">Des mariages qui marquent les cœurs</h2>
+    </section>
+
+    <div class="videos">
+      <div class="video-container" data-aos="fade-up">
+        <video src="video1.mp4" autoplay loop muted playsinline></video>
+        <div class="caption">Des souvenirs qui durent toute une vie</div>
+      </div>
+    </div>
+
+    <section class="intro">
+      <h2 data-aos="fade-up">Laissez-nous sublimer votre histoire</h2>
+      <p data-aos="fade-up" data-aos-delay="200">Avec Enally Paris, chaque détail compte. Chaque émotion est magnifiée.</p>
+    </section>
+
+    <section class="form-section" data-aos="fade-up">
+      <h2>Parlez-nous de votre projet</h2>
+      <form id="eventForm">
+        <div class="grid">
+          <div>
+            <label for="eventType">Type d'événement</label>
+            <select id="eventType" required>
+              <option value="">Sélectionnez un type</option>
+              <option>Mariage</option>
+              <option>Fiançailles</option>
+              <option>Coordination jour J</option>
+              <option>Coaching mariage</option>
+            </select>
+          </div>
+          <div><label>Nom</label><input type="text" required></div>
+          <div><label>Prénom</label><input type="text" required></div>
+          <div><label>Email</label><input type="email" required></div>
+          <div><label>Téléphone</label><input type="tel" required></div>
+          <div><label>Adresse</label><input type="text"></div>
+          <div><label>Ville</label><input type="text"></div>
+          <div><label>Code postal</label><input type="text"></div>
+          <div><label>Date de l'événement</label><input type="date" required></div>
+          <div><label>Lieu de l'événement</label><input type="text"></div>
+          <div><label>Budget souhaité</label><input type="text"></div>
+          <div><label>Votre vision du mariage</label><textarea rows="3"></textarea></div>
+          <div><label>Prestations souhaitées</label><textarea rows="3"></textarea></div>
+          <div><label>Comment nous avez-vous connus ?</label><input type="text"></div>
+        </div>
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+    </section>
+
+    <div class="videos">
+      <div class="video-container" data-aos="fade-up">
+        <video src="video4.mp4" autoplay loop muted playsinline></video>
+        <div class="caption">L'élégance au service de vos rêves</div>
+      </div>
+    </div>
+
+    <section class="socials" data-aos="fade-up">
+        <h3>Suivez-nous</h3>
+        <div class="icons">
+          <a href="https://www.instagram.com/enallyparis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <i data-lucide="instagram"></i> Instagram
+          </a>
+          <a href="https://www.tiktok.com/@enallyparis?is_from_webapp=1&sender_device=pc" target="_blank">
+            <i data-lucide="video"></i> TikTok
+          </a>
+        </div>
+      </section>
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enally Paris – Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
