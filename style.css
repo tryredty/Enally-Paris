@@ -1,4 +1,3 @@
-/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,33 +6,34 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  /* Use Poppins as the primary font */
   background-color: #fef8f5;
   color: #5b4a47;
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #eaaa90;
-  /* Use Enally Paris primary color */
   text-align: center;
   margin-bottom: 1rem;
 }
 
-p,
-label,
-input,
-select,
-textarea,
-button {
+/* Title sizing responsive */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p, label, input, select, textarea, button {
   font-size: 1rem;
 }
 
-/* Header */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header.main-header {
   background: #fff;
   text-align: center;
@@ -52,7 +52,6 @@ header.main-header {
   font-style: italic;
 }
 
-/* Hero Section */
 .hero {
   background: #FFE0DA;
   padding: 4rem 1rem;
@@ -61,33 +60,25 @@ header.main-header {
 .hero1 {
   background: url('back.jpg') no-repeat center center;
   background-size: cover;
-  height: 300px; /* Hauteur réduite pour une forme rectangulaire */
+  height: 300px;
   width: 100%;
 }
 
 .yes {
   text-align: center;
   color: #eaaa90;
-  font-size: 1rem; /* Réduit la taille globale du texte */
   margin: 2rem 1rem;
 }
 
-.first-line {
-  font-size: 1.2rem; /* Première ligne légèrement plus grande */
-}
+.first-line { font-size: 1.2rem; }
+.second-line { font-size: 1rem; }
 
-.second-line {
-  font-size: 1rem; /* Deuxième ligne avec police plus petite */
-}
-
-/* Intro Section */
 .intro {
   padding: 3rem 1rem;
   text-align: center;
   background: #FFF3F0;
 }
 
-/* Video Section */
 .videos {
   display: flex;
   flex-direction: column;
@@ -121,11 +112,10 @@ header.main-header {
   font-weight: 500;
 }
 
-/* Form Section */
 .form-section {
   padding: 2rem 1rem;
   background: #fff;
-   margin-top: 45px;
+  margin-top: 45px;
 }
 
 form {
@@ -140,13 +130,11 @@ form .grid {
   gap: 1rem;
 }
 
-form label {
+label {
   font-weight: bold;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   padding: 0.8rem;
   border: 1px solid #E3B4B4;
   border-radius: 8px;
@@ -157,7 +145,6 @@ button {
   margin-top: 2rem;
   padding: 0.9rem;
   background-color: #EAAA90;
-  /* Use Enally Paris primary color */
   color: white;
   border: none;
   border-radius: 10px;
@@ -170,7 +157,6 @@ button:hover {
   background-color: #b25c6f;
 }
 
-/* Socials Section */
 .socials {
   padding: 3rem 1rem;
   text-align: center;
@@ -186,7 +172,6 @@ button:hover {
   gap: 6px;
 }
 
-/* Footer */
 footer {
   padding: 2rem 1rem;
   text-align: center;
@@ -195,35 +180,18 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  form .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .video-container {
-    width: 95%;
-  }
-}
-
-/* About Section Styles */
+/* About + photo */
 .about-section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 20px;
 }
 
-.about-section h2 {
-  font-size: 2.5rem;
-  color: #EAAA90;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .about-container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
 .about-text {
@@ -231,6 +199,7 @@ footer {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
+  flex: 1 1 400px;
 }
 
 .about-text h3 {
@@ -239,9 +208,11 @@ footer {
   margin-bottom: 10px;
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.about-photo img {
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .philosophy {
@@ -253,168 +224,14 @@ footer {
   letter-spacing: 2px;
 }
 
-@media (min-width: 768px) {
-  .about-container {
-    flex-direction: row;
-  }
-
-  .about-text {
-    flex: 1;
-  }
-}
-
-/* Coming Soon Section Styles */
+/* Coming Soon */
 .coming-soon {
   position: relative;
-  width: 100%;
+  text-align: center;
   max-width: 800px;
   margin: 2rem auto;
-  border-radius: 15px;
   overflow: hidden;
-}
-
-.coming-soon-image {
-  width: 100%;
-  filter: blur(5px);
-  /* Apply blur to the image */
-  object-fit: cover;
-}
-
-.coming-soon-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  /* Semi-transparent white overlay */
-}
-
-.coming-soon-overlay h2 {
-  font-size: 3rem;
-  color: #EAAA90;
-  /* Use Enally Paris primary color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* FAQ Section Styles */
-.faq-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
-}
-
-.faq-container {
-  margin-top: 1rem;
-}
-
-.faq-item {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #FAE8DE;
-  /* Use Enally Paris secondary color */
-}
-
-.faq-question {
-  background: none;
-  border: none;
-  padding: 1rem;
-  width: 100%;
-  text-align: left;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #D2798C;
-  /* Use a brand color */
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question:hover {
-  color: #EAAA90;
-}
-
-.faq-answer {
-  padding: 0 1rem 1rem 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #5b4a47;
-  display: none;
-}
-
-/* Download Section Styles */
-.download-section {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
-  max-width: 600px;
-}
-
-.download-button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #D2798C;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.download-button:hover {
-  background-color: #EAAA90;
-}
-
-@font-face {
-  font-family: 'MaPolice';
-  src: url('Poppins-ExtraLight.otf') format('truetype');
-}
-
-body {
-  font-family: 'MaPolice', sans-serif;
-}
-
-
-
-/* About avec image ronde */
-.image-text-layout {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.portrait {
-  width: 300px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  float: right;
-  margin-left: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.about-text {
-  flex: 1 1 400px;
-}
-
-/* Coming Soon section */
-.coming-soon {
-  position: relative;
-  text-align: center;
-}
-
-.coming-soon-overlay {
-  position: relative;
 }
 
 .coming-soon-image {
@@ -435,216 +252,100 @@ body {
   z-index: 1;
 }
 
-.about-container.with-photo {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.about-text {
-  flex: 1 1 300px;
-  line-height: 1.6;
-}
-
-.about-photo img {
-  width: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.centered {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-.portrait-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.portrait-image {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease;
-}
-
-.portrait-image:hover {
-  transform: scale(1.05);
-}
-
-
-
-.team-section {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-
-.team-photo img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.team-description {
-  max-width: 600px;
-  margin-left: 20px;
-}
-
-/* Titre centré et stylisé */
-.team-description h3 {
-  font-family: 'Playfair Display', serif;
-  color: #eaaa90;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  white-space: nowrap; /* reste sur une ligne */
-}
-
-/* Paragraphe fluide et espacé */
-.team-description p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: justify;
-  padding: 0 1rem;
-  margin-bottom: 30px;
-}
-
-
-/* Section FAQ */
-.faq {
-  margin-top: 40px;
-}
-
-.faq h2 {
-  text-align: center;
-  font-size: 36px;
-  color: #333;
+/* FAQ */
+.faq-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
 }
 
 .faq-item {
-  margin-top: 20px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #FAE8DE;
 }
 
-.faq-item h3 {
-  font-size: 22px;
-  color: #444;
+.faq-question {
+  background: none;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
   font-weight: bold;
+  color: #D2798C;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.faq-item p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
+.faq-answer {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #5b4a47;
+  display: none;
 }
 
-/* Lien Calendly */
-.calendly-link {
+.download-section {
   text-align: center;
-  margin-top: 40px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
+  max-width: 600px;
 }
 
-.calendly-link p {
-  font-size: 18px;
-  color: #333;
-}
-
-.button {
-  background-color:  #D2798C;
-  color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 5px;
+.download-button {
   display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #D2798C;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.button:hover {
-  background-color:  #D2798E;
+.download-button:hover {
+  background-color: #EAAA90;
 }
 
-/* Styles Responsives */
+/* Responsive rules */
 @media (max-width: 768px) {
-  .team-section {
-      flex-direction: column;
-      text-align: center;
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+  .coming-title, .centered { font-size: 2rem; }
+
+  form .grid {
+    grid-template-columns: 1fr;
   }
 
-  .team-photo img {
-      width: 80%;
-      margin: 0 auto;
+  .team-section {
+    flex-direction: column;
+    text-align: center;
   }
 
   .team-description {
-      margin-left: 0;
-      margin-top: 20px;
-  }
-
-  .faq-item h3 {
-      font-size: 20px;
-  }
-
-  .faq-item p {
-      font-size: 16px;
-  }
-
-  .button {
-      font-size: 16px;
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1rem; }
+  .coming-title, .centered { font-size: 1.6rem; }
+
   .video-container {
-      flex-direction: column;
+    width: 95%;
   }
 
   button {
-      font-size: 24px;
+    font-size: 1rem;
   }
 }
-
-
-
-.gallery-button-container {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.gallery-button {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #EAAA90; /* couleur douce */
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.gallery-button:hover {
-  background-color: #d18ab6; /* couleur au survol */
-}
-
-  
