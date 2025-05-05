@@ -125,6 +125,7 @@ header.main-header {
 .form-section {
   padding: 2rem 1rem;
   background: #fff;
+   margin-top: 45px;
 }
 
 form {
