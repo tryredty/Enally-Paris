@@ -141,34 +141,32 @@ input, select, textarea {
   width: 100%;
 }
 
-/* Style générique pour tous les boutons */
-button {
-  margin-top: 2rem;
-  padding: 0.9rem;
-  background-color: #EAAA90;
-  /* Use Enally Paris primary color */
+.custom-button {
+  background-color: #d9c2b0;
   color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 10px;
-  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
 }
 
-button:hover {
-  background-color: #b25c6f;
+.custom-button:hover {
+  background-color: #c8ae9e;
 }
 
-/* Responsive : réduction sur petits écrans */
 @media (max-width: 600px) {
-  button,
-  .button,
-  .download-button,
-  .gallery-button {
+  .custom-button {
     font-size: 0.9rem;
     padding: 10px 16px;
   }
 }
+
+
 
 .socials {
   padding: 3rem 1rem;
