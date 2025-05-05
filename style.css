@@ -1,164 +1,477 @@
+/* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #fef8f5;
-    color: #5b4a47;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-  
-  h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #d2798c;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  p, label, input, select, textarea, button {
-    font-size: 1rem;
-  }
-  
-  header.main-header {
-    background: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 1px solid #f3c3bd;
-  }
-  
-  .logo {
-    width: 100px;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitle {
-    color: #9e7878;
-    font-style: italic;
-  }
-  
-  .hero {
-    background: #ffe0da;
-    padding: 4rem 1rem;
-  }
-  
-  .intro {
-    padding: 3rem 1rem;
-    text-align: center;
-    background: #fff3f0;
-  }
-  
-  .videos {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    margin: 2rem auto;
-  }
-  
-  .video-container {
-    width: 90%;
-    max-width: 600px;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .video-container:hover {
-    transform: scale(1.02);
-  }
-  
-  .video-container video {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .caption {
-    margin-top: 0.8rem;
-    color: #b07575;
-    font-weight: 500;
-  }
-  
-  .form-section {
-    padding: 2rem 1rem;
-    background: #fff;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Use Poppins as the primary font */
+  background-color: #fef8f5;
+  color: #5b4a47;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: #EAAA90;
+  /* Use Enally Paris primary color */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p,
+label,
+input,
+select,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+/* Header */
+header.main-header {
+  background: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #FAE8DE;
+}
+
+.logo {
+  width: 100px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #9e7878;
+  font-style: italic;
+}
+
+/* Hero Section */
+.hero {
+  background: #FFE0DA;
+  padding: 4rem 1rem;
+}
+
+/* Intro Section */
+.intro {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #FFF3F0;
+}
+
+/* Video Section */
+.videos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.video-container {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.caption {
+  margin-top: 0.8rem;
+  color: #b07575;
+  font-weight: 500;
+}
+
+/* Form Section */
+.form-section {
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #E3B4B4;
+  border-radius: 8px;
+  width: 100%;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.9rem;
+  background-color: #EAAA90;
+  /* Use Enally Paris primary color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #b25c6f;
+}
+
+/* Socials Section */
+.socials {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.socials .icons a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #EAAA90;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #FBE8E3;
+  color: #7c6464;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   form .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr;
   }
-  
-  form label {
-    font-weight: bold;
+
+  .video-container {
+    width: 95%;
   }
-  
-  input, select, textarea {
-    padding: 0.8rem;
-    border: 1px solid #e3b4b4;
-    border-radius: 8px;
-    width: 100%;
+}
+
+/* About Section Styles */
+.about-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  color: #EAAA90;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-text {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  color: #D2798C;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.philosophy {
+  font-weight: bold;
+  color: #EAAA90;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
   }
-  
-  button {
-    margin-top: 2rem;
-    padding: 0.9rem;
-    background-color: #d2798c;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+
+  .about-text {
+    flex: 1;
   }
-  
-  button:hover {
-    background-color: #b25c6f;
-  }
-  
-  .socials {
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-  
-  .socials .icons a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #d2798c;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  
-  footer {
-    padding: 2rem 1rem;
-    text-align: center;
-    background-color: #fbe8e3;
-    color: #7c6464;
-    font-size: 0.9rem;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    form .grid {
-      grid-template-columns: 1fr;
-    }
-    .video-container {
-      width: 95%;
-    }
-  }
+}
+
+/* Coming Soon Section Styles */
+.coming-soon {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.coming-soon-image {
+  width: 100%;
+  filter: blur(5px);
+  /* Apply blur to the image */
+  object-fit: cover;
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Semi-transparent white overlay */
+}
+
+.coming-soon-overlay h2 {
+  font-size: 3rem;
+  color: #EAAA90;
+  /* Use Enally Paris primary color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
+}
+
+.faq-container {
+  margin-top: 1rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #FAE8DE;
+  /* Use Enally Paris secondary color */
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #D2798C;
+  /* Use a brand color */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  color: #EAAA90;
+}
+
+.faq-answer {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5b4a47;
+  display: none;
+}
+
+/* Download Section Styles */
+.download-section {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
+  max-width: 600px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #D2798C;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #EAAA90;
+}
+
+@font-face {
+  font-family: 'MaPolice';
+  src: url('Poppins-ExtraLight.otf') format('truetype');
+}
+
+body {
+  font-family: 'MaPolice', sans-serif;
+}
+
+
+
+/* About avec image ronde */
+.image-text-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.portrait {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin-left: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+/* Coming Soon section */
+.coming-soon {
+  position: relative;
+  text-align: center;
+}
+
+.coming-soon-overlay {
+  position: relative;
+}
+
+.coming-soon-image {
+  width: 100%;
+  filter: blur(2px);
+  opacity: 0.9;
+}
+
+.coming-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  z-index: 1;
+}
+
+.about-container.with-photo {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 300px;
+  line-height: 1.6;
+}
+
+.about-photo img {
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.portrait-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.portrait-image {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.portrait-image:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  max-width: 700px;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
   
