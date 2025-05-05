@@ -141,7 +141,10 @@ input, select, textarea {
   width: 100%;
 }
 
-.custom-button {
+/* Boutons personnalisés */
+a.button,
+a.gallery-button,
+a.download-button {
   background-color: #d9c2b0;
   color: white;
   padding: 12px 20px;
@@ -153,20 +156,23 @@ input, select, textarea {
   display: inline-block;
   transition: background-color 0.3s ease;
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
-.custom-button:hover {
+a.button:hover,
+a.gallery-button:hover,
+a.download-button:hover {
   background-color: #c8ae9e;
 }
 
 @media (max-width: 600px) {
-  .custom-button {
+  a.button,
+  a.gallery-button,
+  a.download-button {
     font-size: 0.9rem;
     padding: 10px 16px;
   }
 }
-
-
 
 .socials {
   padding: 3rem 1rem;
