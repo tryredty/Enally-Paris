@@ -509,17 +509,28 @@ body {
   margin-left: 20px;
 }
 
+/* Titre centré et stylisé */
 .team-description h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+  font-family: 'Playfair Display', serif;
+  color: #eaaa90;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  white-space: nowrap; /* reste sur une ligne */
 }
 
+/* Paragraphe fluide et espacé */
 .team-description p {
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.6;
   color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0 1rem;
+  margin-bottom: 30px;
 }
+
 
 /* Section FAQ */
 .faq {
