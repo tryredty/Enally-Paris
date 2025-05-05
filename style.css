@@ -1,103 +1,116 @@
+/* Reset de base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Typographie générale */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fef8f5;
-  color: #5b4a47;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  color: #333;
+  background-color: #fff;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  color: #eaaa90;
+  font-weight: 600;
+  color: #4a2c2a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.main-header {
   text-align: center;
-  margin-bottom: 1rem;
-}
-
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-
-p, label, input, select, textarea, button {
-  font-size: 1rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-header.main-header {
-  background: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  border-bottom: 1px solid #FAE8DE;
+  padding: 40px 20px 20px;
+  background-color: #fff5f8;
 }
 
 .logo {
-  width: 100px;
-  border-radius: 20px;
-  margin-bottom: 1rem;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  color: #9e7878;
   font-style: italic;
+  font-size: 1.1rem;
+  color: #a67c8b;
 }
 
-.hero {
-  background: #FFE0DA;
-  padding: 4rem 1rem;
-}
-
+/* Hero section */
 .hero1 {
-  background: url('back.jpg') no-repeat center center;
+  background-image: url('back.jpg'); /* à remplacer par une image réelle */
   background-size: cover;
-  height: 300px;
-  width: 100%;
+  background-position: center;
+  height: 400px;
 }
 
+/* Texte sous l’image */
 .yes {
   text-align: center;
-  color: #eaaa90;
-  margin: 2rem 1rem;
+  margin: 40px 20px;
+  font-size: 1.8rem;
+  color: #4a2c2a;
 }
 
-.first-line { font-size: 1.2rem; }
-.second-line { font-size: 1rem; }
-
-.intro {
-  padding: 3rem 1rem;
-  text-align: center;
-  background: #FFF3F0;
+.first-line {
+  display: block;
 }
 
-.videos {
+/* Section À propos */
+.about-section {
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+.presentation-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.portrait-container {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: center;
-  margin: 2rem auto;
 }
 
-.video-container {
-  width: 90%;
-  max-width: 600px;
-  background: #fff;
-  padding: 1rem;
+.portrait-image {
+  width: 300px;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
-.video-container:hover {
-  transform: scale(1.02);
+.caption h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.caption p {
+  max-width: 700px;
+  color: #555;
+}
+
+/* Philosophie */
+.philosophy {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b35c6b;
+}
+
+/* Vidéo slider */
+.video-slider {
+  position: relative;
+  margin: 40px auto;
+  max-width: 800px;
 }
 
 .video-container video {
@@ -105,271 +118,222 @@ header.main-header {
   border-radius: 10px;
 }
 
-.caption {
-  margin-top: 0.8rem;
-  color: #b07575;
-  font-weight: 500;
+.video-container .caption {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #777;
 }
 
-.form-section {
-  padding: 2rem 1rem;
-  background: #fff;
-  margin-top: 45px;
+/* Galerie */
+.gallery-button-container {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-form .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-label {
-  font-weight: bold;
-}
-
-input, select, textarea {
-  padding: 0.8rem;
-  border: 1px solid #E3B4B4;
-  border-radius: 8px;
-  width: 100%;
-}
-
-/* 🌸 Unified button styling */
-.custom-button,
-a.button-link {
-  background-color: #D2798C;
-  color: white !important;
-  padding: 12px 24px;
-  border: none;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none !important;
+.gallery-button {
+  background-color: #eeced6;
+  color: #4a2c2a;
+  padding: 20px;
   display: inline-block;
-  transition: background-color 0.3s ease;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-}
-
-.custom-button:hover,
-a.button-link:hover {
-  background-color: #EAAA90;
-}
-
-/* 📍 Centered content wrapper */
-.centered-section {
-  text-align: center;
-  margin: 3rem auto;
-  padding: 2rem 1rem;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
-  max-width: 600px;
-}
-
-@media (max-width: 600px) {
-  .custom-button,
-  a.button-link {
-    font-size: 0.9rem;
-    padding: 10px 16px;
-  }
-}
-
-.socials {
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.socials .icons a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #EAAA90;
+  border-radius: 10px;
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
 }
 
-footer {
-  padding: 2rem 1rem;
+/* Intro */
+.intro {
   text-align: center;
-  background-color: #FBE8E3;
-  color: #7c6464;
-  font-size: 0.9rem;
+  margin: 50px 20px;
 }
 
-/* About section */
-.about-section {
-  max-width: 1000px;
-  margin: 0 auto;
+.intro p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Équipe */
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 50px 20px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-photo img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.team-description h3 {
+  font-size: 1.5rem;
+}
+
+.team-section p {
+  max-width: 500px;
+  color: #555;
+}
+
+/* Formulaire */
+.form-section {
+  background-color: #fef6f8;
   padding: 50px 20px;
 }
 
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.about-text {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
-  flex: 1 1 400px;
-}
-
-.about-text h3 {
-  font-size: 1.8rem;
-  color: #D2798C;
-  margin-bottom: 10px;
-}
-
-.about-photo img {
-  width: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.philosophy {
-  font-weight: bold;
-  color: #EAAA90;
+.form-section h2 {
   text-align: center;
-  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #4a2c2a;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
   margin-top: 20px;
-  letter-spacing: 2px;
+  padding: 15px 30px;
+  background-color: #a56b7b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Vidéo secondaire */
+.videos {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.videos video {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* Coming Soon */
 .coming-soon {
-  position: relative;
+  background-color: #fff0f4;
+  padding: 40px 20px;
   text-align: center;
-  max-width: 800px;
-  margin: 2rem auto;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-.coming-soon-image {
-  width: 100%;
-  filter: blur(2px);
-  opacity: 0.9;
 }
 
 .coming-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
-  z-index: 1;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.coming-soon-image {
+  max-width: 300px;
+  border-radius: 20px;
 }
 
 /* FAQ */
 .faq-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
+  padding: 50px 20px;
+  background-color: #f8f8f8;
 }
 
 .faq-item {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #FAE8DE;
+  margin-bottom: 20px;
 }
 
 .faq-question {
-  background: none;
-  border: none;
-  padding: 1rem;
+  background-color: #fff;
+  padding: 15px 20px;
   width: 100%;
+  border: 1px solid #ddd;
   text-align: left;
-  font-size: 1.1rem;
   font-weight: bold;
-  color: #D2798C;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
 }
 
 .faq-answer {
-  padding: 0 1rem 1rem;
-  font-size: 1rem;
-  color: #5b4a47;
+  padding: 15px 20px;
+  background-color: #fff;
+  border: 1px solid #eee;
   display: none;
 }
 
+/* Calendly */
+.calendly-link {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.custom-button {
+  background-color: #b25d74;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* Téléchargement livret */
 .download-section {
   text-align: center;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(234, 170, 144, 0.2);
-  max-width: 600px;
+  padding: 50px 20px;
+  background-color: #fff5f8;
 }
 
 .download-button {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #D2798C;
-  color: white;
-  border-radius: 8px;
+  background-color: #e6b5c0;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #4a2c2a;
   font-weight: bold;
-  text-decoration: none;
 }
 
-.download-button:hover {
-  background-color: #EAAA90;
+/* Réseaux sociaux */
+.socials {
+  text-align: center;
+  padding: 30px 20px;
 }
 
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.6rem; }
-  h3 { font-size: 1.3rem; }
-  .coming-title, .centered { font-size: 2rem; }
-
-  form .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .team-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .team-description {
-    margin-left: 0;
-    margin-top: 20px;
-  }
+.socials .icons a {
+  margin: 10px;
+  font-size: 1.1rem;
+  display: inline-block;
+  color: #a56b7b;
 }
 
-@media (max-width: 480px) {
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.3rem; }
-  h3 { font-size: 1rem; }
-  .coming-title, .centered { font-size: 1.6rem; }
-
-  .video-container {
-    width: 95%;
-  }
-
-  button {
-    font-size: 1rem;
-  }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-size: 0.9rem;
+  color: #888;
 }
+
 
