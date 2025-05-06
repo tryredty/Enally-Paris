@@ -157,7 +157,7 @@ a.download-button {
   transition: background-color 0.3s ease;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 a.button:hover,
