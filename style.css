@@ -405,5 +405,24 @@ footer {
   color: #D2798C;
 }
 
+.image-text-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
 
+.portrait {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin-left: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
 
