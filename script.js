@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const form = this;
 
-      emailjs.sendForm('service_909lj8l', 'template_i20co0r', form)
+      emailjs.sendForm('', '', form)
           .then(() => {
               alert('Merci ! Votre demande a bien été envoyée.');
               form.reset();
@@ -26,4 +26,17 @@ document.addEventListener('DOMContentLoaded', function () {
               alert('Une erreur est survenue. Veuillez réessayer.');
           });
   });
+
+
+    const message = document.getElementById("successMessage");
+      message.style.display = "block";
+
+      // Optionnel : faire disparaître après 5 secondes
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 5000);
+    }, (error) => {
+      alert("Une erreur est survenue, veuillez réessayer.");
+      console.error(error);
+    });
 });
